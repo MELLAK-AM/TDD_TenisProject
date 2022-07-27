@@ -3,13 +3,23 @@ package com.example.entities;
 public class Partie {
 	
 	//private int id;
-	private boolean encours;
+	//private boolean encours;
 	
-	private Joueur joueur1;
-	private Joueur joueur2;
+	private Joueur joueurUn;
+	private Joueur joueurDeux;
 	
-	private Score score1;
-	private Score score2;
+	public Partie(Joueur joueurUn, Joueur joueurDeux) {
+		
+		this.joueurUn = joueurUn;
+		this.joueurDeux = joueurDeux;
+	}
+	
+	//private Score score1;
+	//private Score score2;
+	
+	
+	
+
 	
 
 }
