@@ -8,7 +8,9 @@ public class Partie {
 	private Joueur joueur1;
 	private Joueur joueur2;
 	
-	private Score score;
+	private Score score1;
+	private Score score2;
+	
 
 }
 

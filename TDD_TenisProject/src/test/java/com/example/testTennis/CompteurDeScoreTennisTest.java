@@ -13,7 +13,10 @@ public class CompteurDeScoreTennisTest {
 	@Test
 	public void testDemarrerPartie() {
 		String debut = CompteurDeScoreTennis.demarrerPartie();
-		assertEquals("La partie commence", debut);
+		assertEquals("La partie commence222", debut);
 
 	}
+	
+	
+	
 }
