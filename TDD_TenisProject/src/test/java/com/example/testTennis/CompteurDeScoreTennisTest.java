@@ -178,6 +178,20 @@ public class CompteurDeScoreTennisTest {
 	        compteur.AjouterPointGagnant(joueurUn);
 	        Assertions.assertEquals(3, partie.getJoueurUn().getJeux());
 	    }
+	 
+	 // Quand un jeu est gagné, alors les deux joueurs retournent à 0 point"
+	    @Test
+	    public void testReinitialiserPoint()
+	    {
+	    	Assertions.assertEquals(0, partie.getJoueurUn().getJeux());
+	        joueurUn.setPoint(40);
+	        joueurUn.setScore("avantage");
+	        joueurDeux.setPoint(40);
+	        compteur.AjouterPointGagnant(joueurUn);
+	        Assertions.assertEquals(1, partie.getJoueurUn().getJeux());
+	        Assertions.assertEquals(0, partie.getJoueurUn().getPoint());
+	        Assertions.assertEquals(0, partie.getJoueurDeux().getPoint());
+	    }
 
 
 	

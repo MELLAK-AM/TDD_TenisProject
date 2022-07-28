@@ -60,8 +60,18 @@ public class CompteurDeScoreTennis {
 	//A chaque jeux gagnant on incrémente le jeux de 1
 	public void JeuxGagnant(Joueur winner) {
 		winner.setJeux(winner.getJeux()+1);
+		//on incrémente de 1 et on renitialise le nbre de point à chaque jeu gagné
+		reinitialiserPoints();
 	}
+	
+	//renitialisation des points lorsqu'un jeu est remporté 
 
+	  public void reinitialiserPoints()
+	    {
+	        partie.getJoueurUn().setPoint(0);
+	        partie.getJoueurDeux().setPoint(0);
+	    
+	    }
 
 
 	//	public void AvantageEgalite(Joueur winner) {
