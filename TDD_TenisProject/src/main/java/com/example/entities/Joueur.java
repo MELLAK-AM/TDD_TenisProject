@@ -1,9 +1,5 @@
 package com.example.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@Data
 
 public class Joueur {
 
@@ -23,6 +19,49 @@ public class Joueur {
 	 
  }
 
+	public String getNom() {
+		return nom;
+	}
 
-	
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public int getPoint() {
+		return point;
+	}
+
+	public void setPoint(int point) {
+		this.point = point;
+	}
+
+	public int getJeux() {
+		return jeux;
+	}
+
+	public void setJeux(int jeux) {
+		this.jeux = jeux;
+	}
+
+	public int getSet() {
+		return set;
+	}
+
+	public void setSet(int set) {
+		this.set = set;
+	}
+
+	public boolean isGagnant() {
+		return gagnant;
+	}
+
+	public void setGagnant(boolean gagnant) {
+		this.gagnant = gagnant;
+	}
+
+	@Override
+	public String toString() {
+		return "Joueur [nom=" + nom + ", point=" + point + ", jeux=" + jeux + ", set=" + set + ", gagnant=" + gagnant
+				+ "]";
+	}
 }
