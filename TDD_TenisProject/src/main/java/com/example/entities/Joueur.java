@@ -8,7 +8,10 @@ public class Joueur {
 	private int jeux;
 	private int set;
 	private boolean gagnant;
+	private String score;
  
+
+
 	//on initialise les : point, jeux et set à 0 au début de la partie
 	public Joueur(String nom) {
 	 point= 0;
@@ -16,6 +19,7 @@ public class Joueur {
 	 set=0;
 	 this.nom=nom;
 	 gagnant = false;
+	 score = "null";
 	 
  }
 
@@ -57,6 +61,13 @@ public class Joueur {
 
 	public void setGagnant(boolean gagnant) {
 		this.gagnant = gagnant;
+	}
+	public String getScore() {
+		return score;
+	}
+
+	public void setScore(String score) {
+		this.score = score;
 	}
 
 	@Override

@@ -138,4 +138,85 @@ public class CompteurDeScoreTennisTest {
 		joueurDeux.setPoint(40);
 		Assertions.assertEquals(40, joueurDeux.getPoint());
 	}
+	
+    //Si les deux joueurs sont a egalité a 40 points, si le perdant a un avantage, alors il le perd"
+    @Test
+    public void testEgalite()
+    {
+        CompteurDeScoreTennis cpt = new CompteurDeScoreTennis(partie);
+        joueurUn.setScore("avantage");
+        joueurDeux.setPoint(40);
+        cpt.AjouterPointGagnant(joueurDeux);
+        Assertions.assertEquals("Egalité", partie.getJoueurDeux().getScore());
+    }
+	
+	// Si les deux joueurs sont a egalité a 40 points, si aucun joueur a un avantage, le joueur qui gagne le point gagne un avantage"  
+	@Test
+	public void testAvantageJ1() {
+		CompteurDeScoreTennis compteur = new CompteurDeScoreTennis(partie);
+		joueurUn.setPoint(40);
+		joueurDeux.setPoint(40);
+		compteur.AjouterPointGagnant(joueurUn );
+		Assertions.assertEquals("avantage", partie.getJoueurUn().getScore());
+	}
+	
+
+	  //"Si un joueur a 40 points gagne le point alors que le perdant a moins de 40 point, alors, il gagne le jeu")
+	 @Test   
+	 public void testJeuGagne()
+	    {
+	        joueurUn.setPoint(40);
+	        joueurDeux.setPoint(0);
+	        compteur.AjouterPointGagnant(joueurUn);
+	        Assertions.assertEquals(1, partie.getJoueurUn().getJeux());
+	        joueurUn.setPoint(40);
+	        joueurDeux.setPoint(15);
+	        compteur.AjouterPointGagnant(joueurUn);
+	        Assertions.assertEquals(2, partie.getJoueurUn().getJeux());
+	        joueurUn.setPoint(40);
+	        joueurDeux.setPoint(30);
+	        compteur.AjouterPointGagnant(joueurUn);
+	        Assertions.assertEquals(3, partie.getJoueurUn().getJeux());
+	    }
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	@Test
+//	public void testEgaliteJ2() {
+//		CompteurDeScoreTennis compteur = new CompteurDeScoreTennis(partie);
+//		joueurUn.setPoint(40);
+//		joueurDeux.setPoint(40);
+//		compteur.AjouterPointGagnant(joueurDeux );
+//		Assertions.assertEquals("Egalité", partie.getJoueurDeux().getScore());
+//	}
+//	
+
+	
+	
+	
+	
+//	// si aucun joueur a un avantage, le joueur qui gagne le point gagne un avantage
+//	@Test
+//	public void testAvantage() {
+//		joueurUn.setPoint(40);
+//		compteur.AvantageEgalite(partie.getJoueurUn());
+//		Assertions.assertEquals("avantage", joueurUn.getPoint());
+//		joueurDeux.setPoint(40);
+//		compteur.AvantageEgalite(partie.getJoueurDeux());
+//		Assertions.assertEquals("avantage", joueurDeux.getPoint());
+//	}
+//	
+	
+	
 }
