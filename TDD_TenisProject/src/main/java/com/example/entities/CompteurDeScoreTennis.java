@@ -5,6 +5,8 @@ public class CompteurDeScoreTennis {
 
 	private Partie partie;
 
+
+
 	public void AjouterPoint(Joueur winer) {
 		if(!partie.getJoueurUn().isGagnant() && !partie.getJoueurDeux().isGagnant()) 
 		{

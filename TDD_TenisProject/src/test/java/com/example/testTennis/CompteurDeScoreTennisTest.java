@@ -23,8 +23,7 @@ public class CompteurDeScoreTennisTest {
 	Joueur joueurUn= new Joueur("toto");
 	Joueur joueurDeux= new Joueur("titi");
 	Partie partie = new Partie(joueurUn, joueurDeux);
-	CompteurDeScoreTennis compteur = new CompteurDeScoreTennis(partie);
-
+	CompteurDeScoreTennis compteur = new CompteurDeScoreTennis();
 	
 	//Lancer une nouvelle partie
 	@Test
