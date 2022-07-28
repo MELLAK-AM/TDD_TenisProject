@@ -1,9 +1,13 @@
 package com.example.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+
 public class Partie {
 	
-	//private int id;
-	//private boolean encours;
+	
 	
 	private Joueur joueurUn;
 	private Joueur joueurDeux;
@@ -14,8 +18,6 @@ public class Partie {
 		this.joueurDeux = joueurDeux;
 	}
 	
-	//private Score score1;
-	//private Score score2;
 	
 	
 	
@@ -25,7 +27,3 @@ public class Partie {
 }
 
 
-// Créer une entité score
-//points, jeu, set
-//Soit tableau de score[points, jeu, set]
-//Les méthodes de compteurDeTennis ne sont pas static

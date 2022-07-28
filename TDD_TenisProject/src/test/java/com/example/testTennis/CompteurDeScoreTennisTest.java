@@ -23,6 +23,7 @@ public class CompteurDeScoreTennisTest {
 	Joueur joueurUn= new Joueur("toto");
 	Joueur joueurDeux= new Joueur("titi");
 	Partie partie = new Partie(joueurUn, joueurDeux);
+	CompteurDeScoreTennis compteur = new CompteurDeScoreTennis(partie);
 
 	
 	//Lancer une nouvelle partie
@@ -40,16 +41,40 @@ public class CompteurDeScoreTennisTest {
 		Assertions.assertNotNull(joueurDeux);
 	}
 	
+	// Début de la partie 0 points.
+	@Test
+	public void testDebutPartie0Point() {
+		Assertions.assertEquals(0, partie.getJoueurUn().getPoint());
+		Assertions.assertEquals(0, partie.getJoueurDeux().getPoint());
+	}
+	
+	// Début de la partie 0 jeux
+	@Test
+	public void testDebutPartie0Jeux() {
+		Assertions.assertEquals(0, partie.getJoueurUn().getJeux());
+		Assertions.assertEquals(0, partie.getJoueurDeux().getJeux());
+	}
+	// Début de la partie 0 set
+	
+	@Test
+	public void testDebutPartie0Set() {
+		Assertions.assertEquals(0, partie.getJoueurUn().getSet());
+		Assertions.assertEquals(0, partie.getJoueurDeux().getSet());
+	}
 	
 	
+	//Gagner un point : pour le joueurUn
+	@Test
+	public void testGagnerUnPointJ1() {
+		compteur.AjouterPoint(joueurUn);
+		Assertions.assertEquals(15, joueurUn.getPoint());
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+	//Gagner un point : pour le joueurDeux
+	@Test
+	public void testGagnerUnPointJ2() {
+		compteur.AjouterPoint(joueurDeux);
+		Assertions.assertEquals(15, joueurDeux.getPoint());
+	}
 	
 }
