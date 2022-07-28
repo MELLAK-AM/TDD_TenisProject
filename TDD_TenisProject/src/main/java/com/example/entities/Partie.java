@@ -1,13 +1,6 @@
 package com.example.entities;
 
-
-import lombok.Data;
-
-@Data
-
 public class Partie {
-	
-	
 	
 	private Joueur joueurUn;
 	private Joueur joueurDeux;
@@ -17,13 +10,24 @@ public class Partie {
 		this.joueurUn = joueurUn;
 		this.joueurDeux = joueurDeux;
 	}
-	
-	
-	
-	
 
-	
+	public Joueur getJoueurUn() {
+		return joueurUn;
+	}
 
+	public void setJoueurUn(Joueur joueurUn) {
+		this.joueurUn = joueurUn;
+	}
+
+	public Joueur getJoueurDeux() {
+		return joueurDeux;
+	}
+
+	public void setJoueurDeux(Joueur joueurDeux) {
+		this.joueurDeux = joueurDeux;
+	}
+	
+	
 }
 
 
